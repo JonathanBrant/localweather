@@ -1,14 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios"; 
-import styled from "styled-components";
-
-const Li = styled.li `
-    list-style: none;
-    font-size: 1.5rem;
-    line-height: 2rem;
-    font-weight: 400;
-   
-`
+import { Li } from './styles.js'
+import { H3 } from './styles.js'
+import { Div } from './styles.js'
 
 const Weather = () => {
 
@@ -36,13 +30,13 @@ const Weather = () => {
             });
         }, []);
         
-        if (location === false) {
+        if (!location) {
             return (
                 <>
           Habilite sua localização no browser 📍
         </>
       )
-    } else if (weather === false) {
+    } else if (!weather) {
         return (
             <>
           Carregando o clima...
@@ -51,8 +45,9 @@ const Weather = () => {
     } else {
         return (
             <>
-          <h3>Condições climáticas em sua localização ({weather['weather'][0]['description']})</h3>
-          <h4>Cidade: {weather['name']}</h4>
+          <Div>  
+          <H3>Condições climáticas em sua localização ({weather['weather'][0]['description']})</H3>
+          <H3>Cidade: {weather['name']}</H3>
           <ul>
             <Li>Temperatura atual: {weather['main']['temp']}°</Li>
             <Li>Sensação térmica: {weather['main']['feels_like']}°</Li>
@@ -60,6 +55,7 @@ const Weather = () => {
             <Li>Temperatura minima: {weather['main']['temp_min']}°</Li>
             <Li>Umidade: {weather['main']['humidity']}%</Li>
           </ul>
+          </Div>
         </>   
       );
     } 

@@ -1,7 +1,8 @@
 import React from 'react';
-import Header from '../Header/Header';
-import Weather from '../Weather/Weather';
+
 import styled from 'styled-components';
+import Header from '../../components/Header/Header';
+import Weather from '../../components/Weather/Weather';
 
 const Container = styled.div`
     width: 50%auto;
@@ -14,7 +15,6 @@ const Home = () => {
         <Container>
         <Header/>
         <Weather/>
-
         </Container>
         </>
     )

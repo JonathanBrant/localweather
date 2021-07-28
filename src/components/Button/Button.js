@@ -1,10 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
-
-const Refresh=styled.button `
-    border: none;
-    background: transparent;
-`
+import { Refresh } from './styles.js'
 
 const Button = () => {
 
