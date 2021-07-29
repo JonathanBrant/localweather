@@ -5,6 +5,10 @@ export const Head = styled.header`
   padding-right: 2rem;
   background: rgba(211, 211, 211, 0.5);
   height: 4rem;
+  display: flex;
+  align-items: center;
+
+ 
 `;
 export const Icon = styled.img`
   height: 3.5rem;
@@ -17,4 +21,8 @@ export const Div = styled.div`
   align-items: center;
   margin-left: auto;
   margin-right: auto;
+
+  @media screen and (max-width: 768px) {
+    width: 80%
+  }
 `;
