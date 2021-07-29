@@ -35,7 +35,7 @@ export const Div = styled.div`
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -60%);
   border-radius: 0.5rem;
 
   @media screen and (max-width: 1024px) {
